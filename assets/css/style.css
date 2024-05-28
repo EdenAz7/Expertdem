@@ -444,14 +444,6 @@ span {
 }
 
 
-
-.waves {
-  width: 100%;
-  max-height: 100px;
-  position: relative;
-  top: 5px;
-}
-
 #contact-us {
   padding: 3rem 0;
   display: flex;
@@ -549,25 +541,6 @@ footer {
   text-align: center;
 }
 
-.social-icons {
-  text-align: center;
-  padding: 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  text-align: center;
-  padding: 5px;
-}
-
-.social-icons i {
-  color: white;
-  font-size: 25px;
-}
-
-.social-icons i:hover {
-  color: var(--blue-color);
-}
 
 .bottom-bar {
   background: var(--blue-color-dark);
@@ -608,8 +581,4 @@ footer {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-.button{
-  background-image: linear-gradient(blue,rgb(44, 142, 153));
 }
