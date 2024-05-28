@@ -570,7 +570,7 @@ footer {
 }
 #form {
   align-items: center;
-  width: auto;
+  width: 90%;
   max-width: 600px;
   background-color: #fff;
   padding: 20px;

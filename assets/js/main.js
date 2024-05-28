@@ -2,7 +2,7 @@
 
 document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the default form submission
-  document.getElementById("message").textContent = "Submitting..";
+  document.getElementById("message").textContent = "Un Instant";
   document.getElementById("message").style.display = "block";
   document.getElementById("submit-button").disabled = true;
 
@@ -38,9 +38,9 @@ document.getElementById("form").addEventListener("submit", function (e) {
     .then(function (data) {
       // Display a success message
       document.getElementById("message").textContent =
-        "Data submitted successfully!";
+        "Merci, Nous vous contacterons";
       document.getElementById("message").style.display = "block";
-      document.getElementById("message").style.backgroundColor = "green";
+      document.getElementById("message").style.backgroundColor = "blue";
       document.getElementById("message").style.color = "beige";
       document.getElementById("submit-button").disabled = false;
       document.getElementById("form").reset();
@@ -54,7 +54,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       // Handle errors, you can display an error message here
       console.error(error);
       document.getElementById("message").textContent =
-        "An error occurred while submitting the form.";
+        "Error";
       document.getElementById("message").style.display = "block";
     });
 });
