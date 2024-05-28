@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="shortcut icon" href="./assets/images/A.K.B.A.L (1).png" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/b536156055.js" crossorigin="anonymous"></script>
+  
   <title>A.K.B.A.L Transport - Transportant le futur</title>
 </head>
 
 <body>
   <header>
-   <a href="#top"> <img src="./assets/images/A.K.B.A.L (1).png" alt="Logo d'A.K.B.A.L Transport" id="nav-logo"></a>
+    <a href="#top"> <img src="./assets/images/A.K.B.A.L (1).png" alt="Logo d'A.K.B.A.L Transport" id="nav-logo"></a>
 
     <nav class="header-nav">
       <div class="desktop-menu">
@@ -165,72 +165,79 @@
 
 
     <section id="contact" style="margin-bottom: 5px; ;">
-      
+
       <form id="form" style="margin: 0 auto; width: 60%;" method="POST">
         <div>
-          <div>
-            <h1 style="font-size: 2rem; margin-bottom: 3rem; background-image: linear-gradient(blue,rgb(0, 255, 221)); color: #ffffff; border-radius: 20px">Contactez-moi</h1>
-          </div>
+          <h1
+            style="font-size: 2rem; margin-bottom: 3rem; background-image: linear-gradient(blue,rgb(0, 255, 221)); color: #ffffff; border-radius: 20px">
+            Contactez-moi</h1>
+            <div id="message" style="
+            display: none;
+            margin: 20px;
+            font-weight: bold;
+            color: rgb(0, 66, 128);
+            padding: 8px;
+            background-color: beige;
+            border-radius: 4px;
+            border-color: rgb(127, 197, 255);
+          "></div>
         </div>
         <div style="margin-bottom: 1rem;">
           <label style="font-weight: bold;">Nom Complet</label>
           <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="text" placeholder="Nom Complet" name="Nom Complet" required/>
+            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="text"
+              placeholder="Nom Complet" name="Nom" required />
           </div>
         </div>
-    
-    
+
+
         <div style="margin-bottom: 1rem;">
           <label style="font-weight: bold;">Email</label>
           <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="email" placeholder="Email" name="Email" required/>
+            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="email"
+              placeholder="Email" name="Email" required />
           </div>
         </div>
-    
+
         <div style="margin-bottom: 1rem;">
           <label style="font-weight: bold;">Telephone</label>
           <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="number" placeholder="Telephone" name="Telephone" required/>
+            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="number"
+              placeholder="Telephone" name="Telephone" required />
           </div>
         </div>
-    
+
         <div style="margin-bottom: 1rem;">
           <label style="font-weight: bold;">Date de chargement</label>
           <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="date" placeholder="Your Date de chargement" name="DDC" />
+            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="date"
+              placeholder="Your Date de chargement" name="DDC" />
           </div>
         </div>
-    
+
         <div style="margin-bottom: 1rem;">
           <label style="font-weight: bold;">Plus d'information</label>
           <div>
-            <textarea style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" placeholder=" " name="Notes"></textarea>
+            <textarea style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" placeholder=" "
+              name="Notes"></textarea>
           </div>
         </div>
-    
+
         <div style="margin-bottom: 1rem;">
-          <div>
-            <button style="padding: 0.5rem 1rem; border-radius: 20px; border: none;  background-image: linear-gradient(blue,rgb(0, 255, 221)); ; color: #fff; font-weight: bold; cursor: pointer;" type="submit" id="submit-button">
+            <div class="control">
+            <button
+              style="padding: 0.5rem 1rem; border-radius: 20px; border: none;  background-image: linear-gradient(blue,rgb(0, 255, 221)); ; color: #fff; font-weight: bold; cursor: pointer;"
+              type="submit" id="submit-button">
               Envoye
             </button>
           </div>
         </div>
       </form>
-      <div id="message" style="
-          display: none;
-          margin: 20px;
-          font-weight: bold;
-          color: green;
-          padding: 8px;
-          background-color: beige;
-          border-radius: 4px;
-          border-color: aquamarine;
-        "></div>
+ 
     </section>
-  </section>
-=
-    
-    
+
+
+
     <section id="contact-us">
       <img src="./assets/images/Design sans titre.png" alt="">
 
