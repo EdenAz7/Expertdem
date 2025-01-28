@@ -4,17 +4,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" /> -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/responsive.css">
-  <link rel="shortcut icon" href="./assets/images/A.K.B.A.L (1).png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/Expertdem.png" type="image/x-icon">
   
-  <title>A.K.B.A.L Transport - Transportant le futur</title>
+  <title>EXPERTDEM - Transportant le futur</title>
+  <style>
+    .form-container {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .required {
+      color: red;
+    }
+    #vid{
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <a href="#top"> <img src="./assets/images/A.K.B.A.L (1).png" alt="Logo d'A.K.B.A.L Transport" id="nav-logo"></a>
+    <a href="#top"> <img src="./assets/images/Expertdem.png" alt="Logo d'EXPERTDEM" id="nav-logo"></a>
 
     <nav class="header-nav">
       <div class="desktop-menu">
@@ -54,13 +107,13 @@
     <section id="hero">
       <video id="hero-video" muted preload="auto" autoplay="autoplay" playsInline loop>
         <source
-          src="./assets/video/Drone Video of Transport Trucks _ No Copyright Video _ Stock Footage _ 4K Footage.mp4"
+          src="./assets/video/videpExpert.mp4"
           type="video/mp4">
       </video>
 
       <div class="overlay-video">
         <div class="hero-text">
-          <h1>NOUS TRANSPORTONS LE <span>FUTUR !</span></h1>
+          <h1 id="vid">NOUS TRANSPORTONS LE <span>FUTUR !</span></h1>
 
           <a href="#contact"><button class="hero-button" type="button">
               <i class="fa-solid fa-truck"></i>Demander un devis</button></a>
@@ -69,12 +122,12 @@
     </section>
 
     <section id="about-us">
-      <img src="./assets/images/motorista.jpg" alt="Photo d'une conductrice">
+      <img src="./assets/images/first_pic.jpg" alt="Photo de demenageurs">
 
       <div class="about-content">
         <h3 class="about-heading">Nous sommes sur le marché depuis plus de 10 ans !</h3>
 
-        <p>Bienvenue chez A.K.B.A.L Transport, Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro omnis
+        <p>Bienvenue chez EXPERTDEM, Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro omnis
           blanditiis, laboriosam odit ratione dolor.</p><br>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eligendi suscipit cum rem veritatis aperiam
@@ -103,10 +156,8 @@
       <div class="cards-container">
         <div class="cards">
           <div class="card-content">
-            <img src="./assets/images/young-couple-new-apartment-with-small-dog.jpg"
-              alt="Photo d'un camion transportant des céréales">
-            <a href="https://www.freepik.com/free-photo/young-couple-new-apartment-with-small-dog_15973256.htm#fromView=search&page=1&position=8&uuid=05b885bb-8ec9-49b5-ae6e-03c720bf897b"
-              style="font-size: 10px;">Image by gpointstudio on Freepik</a>
+            <img src="./assets/images/1.jpg"
+              alt="couple cles">
             <h4>Lorem ipsum dolor sit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eligendi suscipit cum rem veritatis
               aperiam quam quos earum molestiae nobis sed soluta repellendus tempore culpa autem optio, beatae numquam
@@ -118,10 +169,8 @@
         <div class="cards">
           <div class="card-content">
             <img
-              src="./assets/images/close-up-hand-man-use-glue-tape-close-cardboard-box-sealing-big-box-packing-moving-new-house-concept-selective-focusx9cardboard-box.jpg"
-              alt="Photo d'un camion transportant un tracteur">
-            <a href="https://www.freepik.com/free-photo/close-up-hand-man-use-glue-tape-close-cardboard-box-sealing-big-box-packing-moving-new-house-concept-selective-focusx9cardboard-box_24504740.htm#fromView=search&page=1&position=12&uuid=05b885bb-8ec9-49b5-ae6e-03c720bf897b"
-              style="font-size: 10px;">Image by jcomp on Freepik</a>
+              src="./assets/images/2.jpg"
+              alt="moving truck">
             <h4>Lorem ipsum dolor sit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eligendi suscipit cum rem veritatis
               aperiam quam quos earum molestiae nobis sed soluta repellendus tempore culpa autem optio, beatae numquam
@@ -134,10 +183,8 @@
       <div class="cards-container">
         <div class="cards">
           <div class="card-content">
-            <img src="./assets/images/happy-african-american-young-family-bought-new-house.jpg"
-              alt="Photo d'un camion transportant du carburant">
-            <a href="https://www.freepik.com/free-photo/happy-african-american-young-family-bought-new-house_15114284.htm#fromView=search&page=1&position=17&uuid=dff0bcb4-5e00-41f0-a010-9f452a895237"
-              style="font-size: 10px;">Image by tirachardz on Freepik</a>
+            <img src="./assets/images/3.jpg"
+              alt="family enter room">
             <h4>Lorem ipsum dolor sit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eligendi suscipit cum rem veritatis
               aperiam quam quos earum molestiae nobis sed soluta repellendus tempore culpa autem optio, beatae numquam
@@ -148,10 +195,8 @@
         </div>
         <div class="cards">
           <div class="card-content">
-            <img src="./assets/images/new-home-full-unopened-boxes.jpg"
-              alt="Photo d'un camion transportant de la canne à sucre">
-            <a href="https://www.freepik.com/free-photo/new-home-full-unopened-boxes_21249316.htm#fromView=search&page=1&position=38&uuid=dff0bcb4-5e00-41f0-a010-9f452a895237"
-              style="font-size: 10px;">Image by freepik</a>
+            <img src="./assets/images/4.jpg"
+              alt="truck moving">
             <h4>Lorem ipsum dolor sit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eligendi suscipit cum rem veritatis
               aperiam quam quos earum molestiae nobis sed soluta repellendus tempore culpa autem optio, beatae numquam
@@ -163,77 +208,122 @@
       </div>
     </section>
 
-    <section id="contact" style="margin-bottom: 5px; ;">
-
-      <form id="form" style="margin: 0 auto; width: 60%;" method="POST">
-        <div>
-          <h1
-            style="font-size: 2rem; margin-bottom: 3rem; background-image: linear-gradient(blue,rgb(0, 255, 221)); color: #ffffff; border-radius: 20px">
-            Contactez-moi</h1>
-            <div id="message" style="
-            display: none;
-            margin: 20px;
-            font-weight: bold;
-            color: rgb(0, 66, 128);
-            padding: 8px;
-            background-color: beige;
-            border-radius: 4px;
-            border-color: rgb(127, 197, 255);
-          "></div>
-        </div>
-        <div style="margin-bottom: 1rem;">
-          <label style="font-weight: bold;">Nom Complet</label>
-          <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="text"
-              placeholder="Nom Complet" name="Nom" required />
-          </div>
-        </div>
-
-
-        <div style="margin-bottom: 1rem;">
-          <label style="font-weight: bold;">Email</label>
-          <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="email"
-              placeholder="Email" name="Email" required />
-          </div>
-        </div>
-
-        <div style="margin-bottom: 1rem;">
-          <label style="font-weight: bold;">Telephone</label>
-          <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="number"
-              placeholder="Telephone" name="Telephone" required />
-          </div>
-        </div>
-
-        <div style="margin-bottom: 1rem;">
-          <label style="font-weight: bold;">Date de chargement</label>
-          <div>
-            <input style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" type="date"
-              placeholder="Your Date de chargement" name="DDC" />
-          </div>
-        </div>
-
-        <div style="margin-bottom: 1rem;">
-          <label style="font-weight: bold;">Plus d'information</label>
-          <div>
-            <textarea style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;" placeholder=" "
-              name="Notes"></textarea>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 1rem;">
-            <div class="control">
-            <button
-              style="padding: 0.5rem 1rem; border-radius: 20px; border: none;  background-image: linear-gradient(blue,rgb(0, 255, 221)); ; color: #fff; font-weight: bold; cursor: pointer;"
-              type="submit" id="submit-button">
-              Envoye
-            </button>
-          </div>
-        </div>
-      </form>
  
-    </section>
+  <!-- Form -->
+   <section id="contact">
+
+     <form id="form" class="form-container" method="POST">
+       <h1>Contactez-Nous</h1>
+    <div class="form-group">
+      <label for="name">Nom Complet <span class="required">*</span></label>
+      <input id="name" type="text" placeholder="Entrez votre nom complet" name="Nom Complet" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email <span class="required">*</span></label>
+      <input id="email" type="email" placeholder="example@example.com" name="Email" required />
+    </div>
+    <div class="form-group">
+      <label for="phone">Telephone<span class="required">*</span></label>
+      <input id="phone" type="tel" placeholder="Entrez votre numéro de Telephone" name="Telephone" required />
+    </div>
+    <div class="form-group">
+      <label for="current-address">Adresse Actuelle <span class="required">*</span></label>
+      <input id="current-address" type="text" placeholder="Entrez votre adresse actuelle" name="Adresse Actuelle" required />
+    </div>
+    <div class="form-group">
+      <label for="new-address">Nouvelle Adresse <span class="required">*</span></label>
+      <input id="new-address" type="text" placeholder="Entrez votre nouvelle adresse" name="Nouvelle Adresse" required />
+    </div>
+    <div class="form-group">
+      <label for="residence">Type de Résidence <span class="required">*</span></label>
+      <select id="residence" name="Type de Résidence" required>
+        <option value="" disabled selected>Choisissez...</option>
+        <option value="Maison">Maison</option>
+        <option value="Appartement">Appartement</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="notes">Informations Supplémentaires</label>
+      <textarea id="notes" placeholder="Ajoutez des informations supplémentaires" name="Notes"></textarea>
+    </div>
+    <button type="submit" id="submit-button">Envoyer</button>
+  </form>
+
+  <!-- Message Section -->
+  <div
+  id="message"
+  style="
+    display: none;
+    margin: 20px;
+    font-weight: bold;
+    color: green;
+    padding: 8px;
+    background-color: beige;
+    border-radius: 4px;
+    border-color: aquamarine;
+    "
+></div>
+<script>
+  document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission
+    document.getElementById("message").textContent = "Submitting..";
+    document.getElementById("message").style.display = "block";
+    document.getElementById("submit-button").disabled = true;
+
+    // Collect the form data
+    var formData = new FormData(this);
+    var keyValuePairs = [];
+    for (var pair of formData.entries()) {
+      keyValuePairs.push(pair[0] + "=" + pair[1]);
+    }
+
+    var formDataString = keyValuePairs.join("&");
+
+    // Send a POST request to your Google Apps Script
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyrih5dz14Xmwdoj-TzY7YPRyb6g9T-8YnOKWDdobOkOLiIQYVkR7Hxg3AQ1HOb5nik/exec",
+      {
+        redirect: "follow",
+        method: "POST",
+        body: formDataString,
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      }
+    )
+      .then(function (response) {
+        // Check if the request was successful
+        if (response) {
+          return response; // Assuming your script returns JSON response
+        } else {
+          throw new Error("Failed to submit the form.");
+        }
+      })
+      .then(function (data) {
+        // Display a success message
+        document.getElementById("message").textContent =
+          "Data submitted successfully!";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("message").style.backgroundColor = "green";
+        document.getElementById("message").style.color = "beige";
+        document.getElementById("submit-button").disabled = false;
+        document.getElementById("form").reset();
+
+        setTimeout(function () {
+          document.getElementById("message").textContent = "";
+          document.getElementById("message").style.display = "none";
+        }, 2600);
+      })
+      .catch(function (error) {
+        // Handle errors, you can display an error message here
+        console.error(error);
+        document.getElementById("message").textContent =
+          "An error occurred while submitting the form.";
+        document.getElementById("message").style.display = "block";
+      });
+  });
+</script>
+</section>
 
     <section id="contact-us">
       <img src="./assets/images/Design sans titre.png" alt="">
@@ -257,7 +347,7 @@
 
   <footer>
     <div class="bottom-bar">
-      <p>&copy; 2024 A.K.B.A.L Transport. Tous droits réservés</p>
+      <p>&copy; 2025 EXPERTDEM. Tous droits réservés</p>
 
     </div>
   </footer>
