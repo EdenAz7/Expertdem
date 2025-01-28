@@ -54,7 +54,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       // Handle errors, you can display an error message here
       console.error(error);
       document.getElementById("message").textContent =
-        "Error";
+        "Un Instant";
       document.getElementById("message").style.display = "block";
     });
 });
@@ -80,19 +80,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     });
   });
   
-  // DURAÇÃO DO VÍDEO HEADER
-  
-  let heroVideo = document.getElementById('hero-video');
-  
-  heroVideo.currentTime = 20;
-  
-  heroVideo.addEventListener('timeupdate', () => {
-    if (heroVideo.currentTime > 130) {
-      heroVideo.currentTime = 0;
-    }
-  });
-  
-  heroVideo.play();
+
   
   
   

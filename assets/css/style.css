@@ -59,7 +59,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 5rem;
+  height: 8rem;
   width: 100%;
   z-index: 999;
   background-color:white;
@@ -68,7 +68,7 @@ header {
 }
 
 #nav-logo {
-  height: 4rem;
+  height: 8rem;
   transition: .5s ease;
 }
 
@@ -223,14 +223,14 @@ span {
   color: var(--blue-color);
 }
 
-.close-btn {
+/* .close-btn {
   cursor: pointer;
   position: absolute;
   top: 5%;
   left: 85%;
   font-size: 1.5rem;
   color: var(--blue-color)
-}
+} */
 
 .nav-social-links {
   display: flex;
