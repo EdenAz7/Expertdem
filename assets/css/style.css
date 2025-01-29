@@ -58,6 +58,51 @@ h1 , h2  , h3, h4{
   font-weight: 600;
 }
 
+/* Default Navbar Styling (Normal Mode) */
+.navbar {
+  width: 100%;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn-p{
+  margin: 1rem 1rem
+}
+
+/* Fixed Navbar when scrolling */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 1000;
+}
+
+/* Shrinking Effect when Scrolling */
+.navbar.shrink {
+  padding: 5px 0;
+}
+
+/* Default Logo Size */
+.navbar img {
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+}
+
+/* Smaller Logo when Scrolled */
+.navbar.shrink img {
+  width: 100px;
+}
+
+/* Prevent Content Overlap */
+body {
+  padding-top: 0px; /* Default, changed dynamically */
+}
+
 
 #nav-logo {
   height: 11rem;

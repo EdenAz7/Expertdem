@@ -88,7 +88,7 @@
   <nav class="navbar navbar-expand-md navbar-light text-black">
     <div class="container-fluid">
       <a href="#Top"><img src="assets/images/Expertdem.png" alt="" width="150px"></a>
-      <div class="navbar bg-muted">
+      <div class="nav-btn-p bg-muted">
         <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarnav"
           aria-controls="navbarnav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -116,6 +116,24 @@
   </nav>
 
   <main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          var navbar = document.querySelector(".navbar");
+          var body = document.querySelector("body");
+      
+          window.addEventListener("scroll", function () {
+              if (window.scrollY > 50) {
+                  navbar.classList.add("fixed", "shrink"); // Fix the navbar and shrink it
+                  body.style.paddingTop = navbar.offsetHeight + "px"; // Prevent content shift
+              } else {
+                  navbar.classList.remove("fixed", "shrink"); // Remove fixed position at the top
+                  body.style.paddingTop = "0px"; // Reset padding
+              }
+          });
+      });
+      </script>
+      
+      
     <section id="hero">
       <div class="bgImg">
         <br><br>
