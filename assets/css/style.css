@@ -99,9 +99,9 @@ span {
 }
 
 .hero-button {
-  margin: 5rem 0 0;
+  margin: 1rem auto;
   padding: 1rem;
-  border-radius: .7rem;
+  border-radius: 7rem;
   font-size: 1rem;
   text-shadow: 1px 1px 1px #16171649;
   border: none;
