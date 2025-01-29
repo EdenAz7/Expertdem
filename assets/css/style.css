@@ -144,6 +144,7 @@ span {
 }
 
 .hero-button {
+  display: block; /* מאפשר מרכוז אופקי עם margin */
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 7rem;
@@ -154,16 +155,20 @@ span {
   background-color: var(--blue-color);
   color: var(--white-color);
   transition: .3s ease-in-out;
+  width: 50%;
 }
 
 .bgImg {
   background-image: url("/assets/images/bg.jpg");
-  min-height: 400px;
+  min-height: 600px; /* גובה המינימום */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: auto;
+  display: grid; /* הפעלת Flexbox */
+  justify-content: center; /* מרכז תוכן אופקית */
+  align-items: center; /* מרכז תוכן אנכית */
+  text-align: center; /* במידה ויש טקסט */
 }
 
 .hero-button:hover {

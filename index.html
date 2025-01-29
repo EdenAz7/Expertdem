@@ -95,7 +95,7 @@
         </button>
       </div>
       <div id="navbarnav" class="collapse navbar-collapse">
-       <b>
+        <b>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#about-us">À propos</a>
@@ -110,7 +110,7 @@
               <a class="nav-link" href="#contact-us">Contact</a>
             </li>
           </ul>
-       </b>
+        </b>
       </div>
     </div>
   </nav>
@@ -118,22 +118,22 @@
   <main>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-          var navbar = document.querySelector(".navbar");
-          var body = document.querySelector("body");
-      
-          window.addEventListener("scroll", function () {
-              if (window.scrollY > 50) {
-                  navbar.classList.add("fixed", "shrink"); // Fix the navbar and shrink it
-                  body.style.paddingTop = navbar.offsetHeight + "px"; // Prevent content shift
-              } else {
-                  navbar.classList.remove("fixed", "shrink"); // Remove fixed position at the top
-                  body.style.paddingTop = "0px"; // Reset padding
-              }
-          });
+        var navbar = document.querySelector(".navbar");
+        var body = document.querySelector("body");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("fixed", "shrink"); // Fix the navbar and shrink it
+            body.style.paddingTop = navbar.offsetHeight + "px"; // Prevent content shift
+          } else {
+            navbar.classList.remove("fixed", "shrink"); // Remove fixed position at the top
+            body.style.paddingTop = "0px"; // Reset padding
+          }
+        });
       });
-      </script>
-      
-      
+    </script>
+
+
     <section id="hero">
       <div class="bgImg">
         <br><br>
@@ -176,14 +176,15 @@
       </div>
     </section>
 
-    
-    
+
+
     <!-- Form -->
     <section id="contact">
 
       <form id="form" class="form-container" method="POST">
-      
-        <h1 class="section-heading"><img src="assets/images/Expertdem.png" alt="LOGO" width="100px"> <br> Contactez-Nous</h1>
+
+        <h1 class="section-heading"><img src="assets/images/Expertdem.png" alt="LOGO" width="100px"> <br> Contactez-Nous
+        </h1>
         <div class="form-group">
           <label for="name">Prenom <span class="required">*</span></label>
           <input id="name" type="text" placeholder="Entrez votre Prenom" name="Prenom" required />
@@ -252,73 +253,73 @@
         "></div>
         <button type="submit" id="submit-button">Envoyer</button>
         <!-- Message Section -->
-   
+
       </form>
     </section>
 
-    
-      <section id="services">
-        <h2 class="section-heading">Nos Services de Déménagement : </h2> 
-        <h3 class="difText">Formules Adaptées à Vos Besoins</h3>
-        <p><b>Chez EXPERTDEM, nous savons que chaque déménagement est unique. C’est pourquoi nous proposons trois formules
-            adaptées à vos besoins et à votre budget : Éco, Confort, et Luxe.</b></p>
-        <div class="cards-container">
-          <div class="cards">
-            <div class="card-content">
-              <img src="./assets/images/3.jpg" alt="couple cles">
-              <h4 class="difText">Formule Éco</h4>
-              <p>Cette formule est idéale pour les clients souhaitant réduire leurs coûts tout en bénéficiant de
-                l'expertise de nos déménageurs. Avec la formule Éco :</p>
-              <p>• Vous vous chargez de l'emballage de vos affaires personnelles.</p>
-              <p>• Nos équipes s’occupent du chargement, du transport et du déchargement de vos biens à votre nouveau
-                domicile.</p>
-              <p>• Nous mettons à votre disposition des équipements de qualité pour protéger vos meubles pendant le
-                transport.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="card-content">
-              <img src="./assets/images/2.jpg" alt="moving truck">
-              <h4 class="difText">Formule Confort</h4>
-              <p>La formule Confort offre un juste équilibre entre économie et sérénité. Avec cette option :</p>
-              <p>• Nos équipes se chargent de l'emballage de vos objets fragiles (vaisselle, miroirs, objets de valeur).
-              </p>
-              <p>• Nous fournissons les cartons, les housses de protection et le matériel nécessaire.</p>
-              <p>• Le transport, le déchargement et l’installation des meubles dans vos nouvelles pièces sont pris en
-                charge.</p>
-            </div>
+
+    <section id="services">
+      <h2 class="section-heading">Nos Services de Déménagement : </h2>
+      <h3 class="difText">Formules Adaptées à Vos Besoins</h3>
+      <p><b>Chez EXPERTDEM, nous savons que chaque déménagement est unique. C’est pourquoi nous proposons trois formules
+          adaptées à vos besoins et à votre budget : Éco, Confort, et Luxe.</b></p>
+      <div class="cards-container">
+        <div class="cards">
+          <div class="card-content">
+            <img src="./assets/images/3.jpg" alt="couple cles">
+            <h4 class="difText">Formule Éco</h4>
+            <p>Cette formule est idéale pour les clients souhaitant réduire leurs coûts tout en bénéficiant de
+              l'expertise de nos déménageurs. Avec la formule Éco :</p>
+            <p>• Vous vous chargez de l'emballage de vos affaires personnelles.</p>
+            <p>• Nos équipes s’occupent du chargement, du transport et du déchargement de vos biens à votre nouveau
+              domicile.</p>
+            <p>• Nous mettons à votre disposition des équipements de qualité pour protéger vos meubles pendant le
+              transport.</p>
           </div>
         </div>
-        <div class="cards-container">
-          <div class="cards">
-            <div class="card-content">
-              <img src="./assets/images/4.jpg" alt="family enter room">
-              <h4 class="difText">Formule Luxe</h4>
-              <p>Pour une tranquillité totale, optez pour notre formule Luxe. Cette prestation clé en main inclut :</p>
-              <p>• L'emballage intégral de vos biens, y compris vos vêtements, livres, objets décoratifs, et appareils
-                électroménagers.</p>
-              <p>• Le démontage et le remontage de vos meubles dans votre nouveau logement.</p>
-              <p>• Un accompagnement personnalisé, avec un suivi constant de votre projet du début à la fin.</p>
-            </div>
+        <div class="cards">
+          <div class="card-content">
+            <img src="./assets/images/2.jpg" alt="moving truck">
+            <h4 class="difText">Formule Confort</h4>
+            <p>La formule Confort offre un juste équilibre entre économie et sérénité. Avec cette option :</p>
+            <p>• Nos équipes se chargent de l'emballage de vos objets fragiles (vaisselle, miroirs, objets de valeur).
+            </p>
+            <p>• Nous fournissons les cartons, les housses de protection et le matériel nécessaire.</p>
+            <p>• Le transport, le déchargement et l’installation des meubles dans vos nouvelles pièces sont pris en
+              charge.</p>
           </div>
-          <div class="cards">
-            <div class="card-content">
-              <img src="./assets/images/1.jpg" alt="truck moving">
-              <h4 class="difText">Services Complémentaires</h4>
-              <p>En plus de nos formules, nous proposons des services supplémentaires pour répondre à tous vos besoins
-                spécifiques :</p>
-              <p>• Garde-meubles sécurisés : Une solution idéale pour stocker vos biens en toute sérénité, quelle que soit
-                la durée.</p>
-              <p>• Monte-meubles : Parfait pour les accès difficiles ou les déménagements d’étages élevés.</p>
-              <p>• Transport d’objets lourds et encombrants : Nos équipes spécialisées gèrent avec soin les déménagements
-                de pianos, de billards, de coffres-forts ou tout autre objet de grand volume.</p>
-            </div>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="cards">
+          <div class="card-content">
+            <img src="./assets/images/4.jpg" alt="family enter room">
+            <h4 class="difText">Formule Luxe</h4>
+            <p>Pour une tranquillité totale, optez pour notre formule Luxe. Cette prestation clé en main inclut :</p>
+            <p>• L'emballage intégral de vos biens, y compris vos vêtements, livres, objets décoratifs, et appareils
+              électroménagers.</p>
+            <p>• Le démontage et le remontage de vos meubles dans votre nouveau logement.</p>
+            <p>• Un accompagnement personnalisé, avec un suivi constant de votre projet du début à la fin.</p>
           </div>
-        </div><br>
-        <p><b>Que vous choisissiez la formule Éco, Confort ou Luxe, EXPERTDEM met tout en œuvre pour vous offrir un
-            déménagement sécurisé, rapide et sur-mesure. Contactez-nous pour obtenir un devis personnalisé et découvrez la
-            solution qui vous convient le mieux.</b></p>
-      </section>
+        </div>
+        <div class="cards">
+          <div class="card-content">
+            <img src="./assets/images/1.jpg" alt="truck moving">
+            <h4 class="difText">Services Complémentaires</h4>
+            <p>En plus de nos formules, nous proposons des services supplémentaires pour répondre à tous vos besoins
+              spécifiques :</p>
+            <p>• Garde-meubles sécurisés : Une solution idéale pour stocker vos biens en toute sérénité, quelle que soit
+              la durée.</p>
+            <p>• Monte-meubles : Parfait pour les accès difficiles ou les déménagements d’étages élevés.</p>
+            <p>• Transport d’objets lourds et encombrants : Nos équipes spécialisées gèrent avec soin les déménagements
+              de pianos, de billards, de coffres-forts ou tout autre objet de grand volume.</p>
+          </div>
+        </div>
+      </div><br>
+      <p><b>Que vous choisissiez la formule Éco, Confort ou Luxe, EXPERTDEM met tout en œuvre pour vous offrir un
+          déménagement sécurisé, rapide et sur-mesure. Contactez-nous pour obtenir un devis personnalisé et découvrez la
+          solution qui vous convient le mieux.</b></p>
+    </section>
     <script>
       document.getElementById("form").addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent the default form submission
@@ -378,6 +379,17 @@
             document.getElementById("message").style.display = "block";
           });
       });
+      // קבלת התאריך של היום
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0'); // חודשים הם מ-0 ל-11
+      const dd = String(today.getDate()).padStart(2, '0');
+
+      // פורמט תאריך yyyy-mm-dd
+      const minDate = `${yyyy}-${mm}-${dd}`;
+
+      // הגדרת המאפיין 'min' לשדה התאריך
+      document.getElementById('date').setAttribute('min', minDate);
     </script>
 
     <section id="contact-us">
