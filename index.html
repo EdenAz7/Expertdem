@@ -16,72 +16,7 @@
   <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="shortcut icon" href="./assets/images/Expertdem.png" type="image/x-icon">
 
-  <title>EXPERTDEM - Transportant le futur</title>
-  <style>
-    .form-container {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      width: 100%;
-      max-width: 400px;
-      margin: 50px auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    input,
-    select,
-    textarea,
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-    }
-
-    .required {
-      color: red;
-    }
-
-    #vid {
-      color: #fff;
-    }
-  </style>
+  <title>EXPERTDEM</title>
 </head>
 
 <body>
@@ -116,24 +51,7 @@
   </nav>
 
   <main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var navbar = document.querySelector(".navbar");
-        var body = document.querySelector("body");
-
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 50) {
-            navbar.classList.add("fixed", "shrink"); // Fix the navbar and shrink it
-            body.style.paddingTop = navbar.offsetHeight + "px"; // Prevent content shift
-          } else {
-            navbar.classList.remove("fixed", "shrink"); // Remove fixed position at the top
-            body.style.paddingTop = "0px"; // Reset padding
-          }
-        });
-      });
-    </script>
-
-
+    
     <section id="hero">
       <div class="bgImg">
         <br><br>
@@ -176,8 +94,6 @@
         </a>
       </div>
     </section>
-
-
 
     <!-- Form -->
     <section id="contact">
@@ -258,7 +174,6 @@
       </form>
     </section>
 
-
     <section id="services">
       <h2 class="section-heading">Nos Services de Déménagement : </h2>
       <h3 class="difText">Formules Adaptées à Vos Besoins</h3>
@@ -321,78 +236,7 @@
           déménagement sécurisé, rapide et sur-mesure. Contactez-nous pour obtenir un devis personnalisé et découvrez la
           solution qui vous convient le mieux.</b></p>
     </section>
-    <script>
-      document.getElementById("form").addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent the default form submission
-        document.getElementById("message").textContent = "Submitting..";
-        document.getElementById("message").style.display = "block";
-        document.getElementById("submit-button").disabled = true;
-
-        // Collect the form data
-        var formData = new FormData(this);
-        var keyValuePairs = [];
-        for (var pair of formData.entries()) {
-          keyValuePairs.push(pair[0] + "=" + pair[1]);
-        }
-
-        var formDataString = keyValuePairs.join("&");
-
-        // Send a POST request to your Google Apps Script
-        fetch(
-          "https://script.google.com/macros/s/AKfycbyrih5dz14Xmwdoj-TzY7YPRyb6g9T-8YnOKWDdobOkOLiIQYVkR7Hxg3AQ1HOb5nik/exec",
-          {
-            redirect: "follow",
-            method: "POST",
-            body: formDataString,
-            headers: {
-              "Content-Type": "text/plain;charset=utf-8",
-            },
-          }
-        )
-          .then(function (response) {
-            // Check if the request was successful
-            if (response) {
-              return response; // Assuming your script returns JSON response
-            } else {
-              throw new Error("Failed to submit the form.");
-            }
-          })
-          .then(function (data) {
-            // Display a success message
-            document.getElementById("message").textContent =
-              "Merci beaucoup, nous vous contacterons dans les plus brefs delais";
-            document.getElementById("message").style.display = "block";
-            document.getElementById("message").style.backgroundColor = "green";
-            document.getElementById("message").style.color = "beige";
-            document.getElementById("submit-button").disabled = false;
-            document.getElementById("form").reset();
-
-            setTimeout(function () {
-              document.getElementById("message").textContent = "";
-              document.getElementById("message").style.display = "none";
-            }, 2600);
-          })
-          .catch(function (error) {
-            // Handle errors, you can display an error message here
-            console.error(error);
-            document.getElementById("message").textContent =
-              "An error occurred while submitting the form.";
-            document.getElementById("message").style.display = "block";
-          });
-      });
-      // קבלת התאריך של היום
-      const today = new Date();
-      const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1).padStart(2, '0'); // חודשים הם מ-0 ל-11
-      const dd = String(today.getDate()).padStart(2, '0');
-
-      // פורמט תאריך yyyy-mm-dd
-      const minDate = `${yyyy}-${mm}-${dd}`;
-
-      // הגדרת המאפיין 'min' לשדה התאריך
-      document.getElementById('date').setAttribute('min', minDate);
-    </script>
-
+  
     <section id="contact-us">
       <img src="./assets/images/Design sans titre.png" alt="">
 
@@ -403,7 +247,7 @@
         <p>Email: <b><a href="mailto:fabien@expertdem.com" style="color: lightblue;">fabien@expertdem.com</a></b></p>
         <p>ou par WhatsApp : <b><a href="https://wa.me/33769590995" target="_blank" style="color: green;">Cliquez
               ici</a></b></p>
-        <p>EXPERTDEM fait partie du groupe AA SALE FORCE</p>
+        
         <p>17 RUE DE L'EGLISE 69003 LYON - 93485135300011</p>
 
         <a href="#contact">
