@@ -58,29 +58,62 @@ document.getElementById("form").addEventListener("submit", function (e) {
       document.getElementById("message").style.display = "block";
     });
 });
-  // MENU MOBILE
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.querySelector('.menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const closeBtn = document.querySelector('.close-btn');
-    const mobileMenuClick = document.querySelector('.mobile-menu ul');
-  
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.style.display = 'block';
-      mobileMenu.style.animation = 'showMenu 1s forwards';
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.style.animation = 'hideMenu 1s forwards';
-    });
-  
-    mobileMenuClick.addEventListener('click', () => {
-      mobileMenu.style.animation = 'hideMenu 1s forwards';
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarHeight = document.querySelector(".navbar").offsetHeight;
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }
     });
   });
-  
+});
 
-  
-  
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  // סגירה אוטומטית של המגירה בלחיצה על קישור
+  document.querySelectorAll(".navbar-collapse .nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+          if (navbarCollapse.classList.contains("show")) {
+              navbarToggler.click(); // מחקה לחיצה כדי לסגור את המגירה
+          }
+      });
+  });
+});
+// MENU MOBILE
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.querySelector('.menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const closeBtn = document.querySelector('.close-btn');
+  const mobileMenuClick = document.querySelector('.mobile-menu ul');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.style.display = 'block';
+    mobileMenu.style.animation = 'showMenu 1s forwards';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.style.animation = 'hideMenu 1s forwards';
+  });
+
+  mobileMenuClick.addEventListener('click', () => {
+    mobileMenu.style.animation = 'hideMenu 1s forwards';
+  });
+});
+
+
+
+

@@ -158,9 +158,10 @@ span {
   width: 50%;
 }
 
+
 .bgImg {
   background-image: url("/assets/images/bg.jpg");
-  min-height: 600px; /* גובה המינימום */
+  min-height: 500px; /* גובה המינימום */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
