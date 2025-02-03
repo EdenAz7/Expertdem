@@ -103,15 +103,57 @@ body {
   padding-top: 0px; /* Default, changed dynamically */
 }
 
+.phone-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.phone-link {
+  text-decoration: none;
+  color: white;
+}
+
+.phone-number i {
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+.phone-number:hover {
+  background-color: #09004d; /* Darker blue on hover */
+}
+
+/* Centering in mobile mode */
+@media (max-width: 768px) {
+  .search-container {
+      text-align: center;
+      width: 100%;
+  }
+
+  .phone-number {
+      display: inline-flex; /* Makes background fit content */
+  }
+}
 
 #nav-logo {
   height: 11rem;
   transition: .5s ease;
 }
 
+.navbar-nav .nav-link {
+  font-size: 20px; /* Adjust as needed */
+  font-weight: bold;
+}
+
 .menu-text {
   display: flex;
-  font-size: 1rem;
+  font-size: 2rem;
   gap: 1.5rem;
   margin-left: 10rem;
 }
