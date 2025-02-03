@@ -284,16 +284,19 @@ button:hover {
 }
 
 #vid {
-  color: #fff;
+  /* color: #fff; */
+  color: rgb(0, 0, 0);
 }
 
 .bgImg {
-  background-image: url("/assets/images/bg.jpg");
-  min-height: 500px; /* גובה המינימום */
+  /* background-image: url("/assets/images/bg.jpg");
+  min-height: 500px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  min-height: 300px;
+  background-color: rgba(0, 89, 255, 0.168);
   display: grid; /* הפעלת Flexbox */
   justify-content: center; /* מרכז תוכן אופקית */
   align-items: center; /* מרכז תוכן אנכית */
