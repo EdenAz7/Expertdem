@@ -17,7 +17,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   // Send a POST request to your Google Apps Script
   fetch(
-    "https://script.google.com/macros/s/AKfycbwqIU2O93xuxUSEWPiM3VkDjP61PLVzvuawY2aX6CGAnM5wiBhE_bzDHbxiCqzyIZNX/exec",
+    "https://script.google.com/macros/s/AKfycbzmYxsp6xCkrnKxtlfXF79Lbyc41fEkCiCXh6nKa-xbF1FFu303oAyvfE3Kd0LODqQ/exec",
     {
       redirect: "follow",
       method: "POST",
