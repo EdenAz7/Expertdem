@@ -150,19 +150,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       }
     })
     .then(function (data) {
-      // Display a success message
-      document.getElementById("message").textContent =
-        "Merci beaucoup, nous vous contacterons dans les plus brefs delais";
-      document.getElementById("message").style.display = "block";
-      document.getElementById("message").style.backgroundColor = "green";
-      document.getElementById("message").style.color = "beige";
-      document.getElementById("submit-button").disabled = false;
-      document.getElementById("form").reset();
-
-      setTimeout(function () {
-        document.getElementById("message").textContent = "";
-        document.getElementById("message").style.display = "none";
-      }, 2600);
+      window.location.href = "/merci.html";
     })
     .catch(function (error) {
       // Handle errors, you can display an error message here
