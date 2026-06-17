@@ -7,7 +7,6 @@
     <title>Enquête sur nos services</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <style>
-        /* Global Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -25,7 +24,6 @@
             font-size: 16px;
         }
 
-        /* Quiz Container Styles */
         #form {
             width: 90%;
             max-width: 600px;
@@ -41,18 +39,15 @@
             margin-bottom: 20px;
         }
 
-        /* Question Styles */
         .field {
             margin-bottom: 20px;
         }
 
-        /* Result Styles */
         #result {
             margin-top: 20px;
             font-weight: bold;
         }
 
-        /* Submit Button Styles */
         #submit-button {
             width: 100%;
             padding: 15px;
@@ -69,7 +64,6 @@
             background-color: #1d7f36;
         }
 
-        /* Modal Styles */
         .badModal,
         .goodModal {
             display: none;
@@ -88,7 +82,6 @@
             text-align: center;
         }
 
-        /* Modal Content Styles */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -99,7 +92,6 @@
             border-radius: 8px;
         }
 
-        /* Media Queries for responsiveness */
         @media only screen and (max-width: 600px) {
             .star {
                 font-size: 20px;
@@ -242,32 +234,21 @@
 
     <script>
         document.getElementById("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault();
             document.getElementById("message").textContent = "Un Instant..";
             document.getElementById("message").style.display = "block";
             document.getElementById("submit-button").disabled = true;
 
-            // Collect the form data
             var formData = new FormData(this);
-            var sum = 0;
-            var count = 0;
-            for (var pair of formData.entries()) {
-                if (!isNaN(pair[1]) && pair[1].trim() !== '') { // Check if the value is a number
-                    sum += parseInt(pair[1]); // Add the value to the sum
-                    count++; // Increment count to calculate the number of questions answered
-                }
-            }
-
-            // Calculate the average
-            var average = count > 0 ? sum / count : 0;
             var formDataString = new URLSearchParams(formData).toString();
+            
+            var question5Value = parseInt(formData.get("question5"), 10);
 
-            // Send a POST request to your Google Apps Script
             fetch(
                 "https://script.google.com/macros/s/AKfycbxJ8C7Yr8lgmIc5zC24oIyLx10Jx1bZLju_4Z9F9XG55u4QMM0t3I6x9rgeJ7v2dwf6mw/exec",
                 {
                     method: "POST",
-                    mode: "no-cors", // מעקף חובה לשגיאות CORS מול שרתי גוגל
+                    mode: "no-cors", 
                     body: formDataString,
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
@@ -275,16 +256,12 @@
                 }
             )
             .then(function () {
-                // ברגע שהשתמשנו ב-no-cors, אי אפשר לקרוא את התגובה מגוגל.
-                // לכן אנחנו מניחים שהבקשה יצאה בהצלחה וממשיכים הלאה.
                 
-                // Display a success message
                 document.getElementById("message").textContent = "Un Instant";
                 document.getElementById("message").style.backgroundColor = "green";
                 document.getElementById("message").style.color = "beige";
 
-                // Check the average and redirect accordingly
-                if (average >= 3.8) {
+                if (question5Value > 3) {
                     setTimeout(() => {
                         window.location.href = 'https://gowork.fr/amyas-transports-gentilly';
                     }, 2000);
@@ -306,7 +283,6 @@
 
             })
             .catch(function (error) {
-                // תפיסת שגיאות רק במקרה של כשל ברשת (כמו ניתוק אינטרנט)
                 console.error(error);
                 document.getElementById("message").textContent = "An error occurred while submitting the form.";
                 document.getElementById("message").style.display = "block";
