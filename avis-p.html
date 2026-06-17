@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquête sur nos services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Quiz Container Styles */
+        #form {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Question Styles */
+        .field {
+            margin-bottom: 20px;
+        }
+
+        /* Result Styles */
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Submit Button Styles */
+        #submit-button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #65c960;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #submit-button:hover {
+            background-color: #1d7f36;
+        }
+
+        /* Modal Styles */
+        .badModal,
+        .goodModal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            padding-top: 25%;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Modal Content Styles */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media only screen and (max-width: 600px) {
+            .star {
+                font-size: 20px;
+            }
+
+            #submit-button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form" class="container m-4 pl-4" method="POST">
+        <h1 id="header">Enquête sur nos services <br> <img src="/assets/images/Expertdem.png" alt=""
+        <h3>Sur une échelle de 1 (Mauvais) à 5 (Parfait)</h3><br>
+        <div id="message" style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "></div>
+        
+        <div class="field">
+            <label class="label">Nom Complet</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Votre nom complet" name="Nom" required />
+            </div>
+        </div>
+
+        <div class="field">
+            <p>1. Étiez-vous satisfait du processus de planification de votre déménagement?</p>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select name="question1" required>
+                        <option value="" selected disabled hidden>****</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="field">
+            <p>2. À quel point notre personnel était-il courtois et professionnel pendant toute la durée du service ?</p>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select name="question2" required>
+                        <option value="" selected disabled hidden>****</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="field">
+            <p>3. À quel point avez-vous trouvé que notre équipe a pris des précautions spécifiques pour protéger et manipuler vos biens fragiles pendant le processus de déménagement ?</p>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select name="question3" required>
+                        <option value="" selected disabled hidden>****</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="field">
+            <p>4. Comment évalueriez-vous la communication avec notre entreprise, y compris la clarté des informations fournies avant et pendant le déménagement ?</p>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select name="question4" required>
+                        <option value="" selected disabled hidden>****</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="field">
+            <p>5. Dans l'ensemble, à quel point êtes-vous satisfait(e) de la qualité globale des services de déménagement que vous avez reçus de notre part ?</p>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select name="question5" required>
+                        <option value="" selected disabled hidden>****</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control" style="width: 100%;">
+                <button class="button is-primary" type="submit" id="submit-button">
+                    Page Suivant
+                </button>
+            </div>
+        </div>
+
+        <div id="goodModal" class="goodModal">
+            <div class="modal-content">
+                <h3>Encore une seconde!</h3>
+                <p>Une page va s'ouvrir pour laisser un avis</p>
+                <p>Merci</p>
+            </div>
+        </div>
+
+        <div id="badModal" class="badModal">
+            <div class="modal-content">
+                <h4>Nous vous remercions sincèrement de votre coopération.</h4> <br>
+                <p>nous avons pris en considération votre avis et l'avons communiqué à notre équipe technique.</p>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            document.getElementById("message").textContent = "Un Instant..";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("submit-button").disabled = true;
+
+            // Collect the form data
+            var formData = new FormData(this);
+            var sum = 0;
+            var count = 0;
+            for (var pair of formData.entries()) {
+                if (!isNaN(pair[1]) && pair[1].trim() !== '') { // Check if the value is a number
+                    sum += parseInt(pair[1]); // Add the value to the sum
+                    count++; // Increment count to calculate the number of questions answered
+                }
+            }
+
+            // Calculate the average
+            var average = count > 0 ? sum / count : 0;
+            var formDataString = new URLSearchParams(formData).toString();
+
+            // Send a POST request to your Google Apps Script
+            fetch(
+                "https://script.google.com/macros/s/AKfycbxGrMhujRNr_KWPdhsJ7tURrTuVOWmaY2-fzuI0dza3gbRydepxKtpUYx88i09_7Cwm/exec",
+                {
+                    redirect: "follow",
+                    method: "POST",
+                    body: formDataString,
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                }
+            )
+            .then(function (response) {
+                // Check if the request was successful
+                if (response.ok) {
+                    return response; // Assuming your script returns JSON response
+                } else {
+                    throw new Error("Failed to submit the form.");
+                }
+            })
+            .then(function (data) {
+                // Display a success message
+                document.getElementById("message").textContent = "Un Instant";
+                document.getElementById("message").style.backgroundColor = "green";
+                document.getElementById("message").style.color = "beige";
+
+                // Check the average and redirect accordingly
+                if (average >= 3.8) {
+                    setTimeout(() => {
+                        window.location.href = 'https://www.pagesjaunes.fr/contribution/votre-avis/56182032?codeRubrique=52154000';
+                    }, 2000);
+                    document.getElementById("goodModal").style.display = "block";
+                } else {
+                    setTimeout(() => {
+                        document.body.innerHTML = '';
+                        setTimeout(() => {
+                            window.close();
+                        }, 1000);
+                    }, 3000);
+                    document.getElementById("badModal").style.display = "block";
+                }
+
+                document.getElementById("message").textContent = "";
+                document.getElementById("message").style.display = "none";
+                document.getElementById("submit-button").disabled = false;
+                document.getElementById("form").reset();
+
+            })
+            .catch(function (error) {
+                // Handle errors, you can display an error message here
+                console.error(error);
+                document.getElementById("message").textContent = "An error occurred while submitting the form.";
+                document.getElementById("message").style.display = "block";
+                document.getElementById("submit-button").disabled = false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
