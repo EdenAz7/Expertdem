@@ -115,7 +115,8 @@
 <body>
 
     <form id="form" class="container m-4 pl-4" method="POST">
-<h1 id="header">Enquête sur nos services <br> <img src="/assets/images/Expertdem.png" alt="Logo Expertdem" style="width: 200px;"></h1>        
+        <h1 id="header">Enquête sur nos services <br> <img src="/assets/images/Expertdem.png" alt="Logo Expertdem" style="width: 200px;"></h1>
+        
         <h3>Sur une échelle de 1 (Mauvais) à 5 (Parfait)</h3><br>
         <div id="message" style="
         display: none;
@@ -265,23 +266,18 @@
             fetch(
                 "https://script.google.com/macros/s/AKfycbyxOrzC0tL4jdFtZvXF4B6j-QumzNBk1A9_InJVCGoMdp9O9FVrlqO6SdPU2yiT-Rnd5A/exec",
                 {
-                    redirect: "follow",
                     method: "POST",
+                    mode: "no-cors", // מעקף חובה לשגיאות CORS מול שרתי גוגל
                     body: formDataString,
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
                 }
             )
-            .then(function (response) {
-                // Check if the request was successful
-                if (response.ok) {
-                    return response; // Assuming your script returns JSON response
-                } else {
-                    throw new Error("Failed to submit the form.");
-                }
-            })
-            .then(function (data) {
+            .then(function () {
+                // ברגע שהשתמשנו ב-no-cors, אי אפשר לקרוא את התגובה מגוגל.
+                // לכן אנחנו מניחים שהבקשה יצאה בהצלחה וממשיכים הלאה.
+                
                 // Display a success message
                 document.getElementById("message").textContent = "Un Instant";
                 document.getElementById("message").style.backgroundColor = "green";
@@ -310,7 +306,7 @@
 
             })
             .catch(function (error) {
-                // Handle errors, you can display an error message here
+                // תפיסת שגיאות רק במקרה של כשל ברשת (כמו ניתוק אינטרנט)
                 console.error(error);
                 document.getElementById("message").textContent = "An error occurred while submitting the form.";
                 document.getElementById("message").style.display = "block";
