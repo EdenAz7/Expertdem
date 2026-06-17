@@ -7,7 +7,6 @@
     <title>Enquête sur nos services</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <style>
-        /* Global Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -41,18 +40,15 @@
             margin-bottom: 20px;
         }
 
-        /* Question Styles */
         .field {
             margin-bottom: 20px;
         }
 
-        /* Result Styles */
         #result {
             margin-top: 20px;
             font-weight: bold;
         }
 
-        /* Submit Button Styles */
         #submit-button {
             width: 100%;
             padding: 15px;
@@ -69,7 +65,6 @@
             background-color: #1d7f36;
         }
 
-        /* Modal Styles */
         .badModal,
         .goodModal {
             display: none;
@@ -88,7 +83,6 @@
             text-align: center;
         }
 
-        /* Modal Content Styles */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -99,7 +93,6 @@
             border-radius: 8px;
         }
 
-        /* Media Queries for responsiveness */
         @media only screen and (max-width: 600px) {
             .star {
                 font-size: 20px;
@@ -115,7 +108,8 @@
 <body>
 
     <form id="form" class="container m-4 pl-4" method="POST">
-<h1 id="header">Enquête sur nos services <br> <img src="/assets/images/Expertdem.png" alt="Logo Expertdem" style="width: 200px;"></h1>        
+        <h1 id="header">Enquête sur nos services <br> <img src="/assets/images/Expertdem.png" alt="Logo Expertdem" style="width: 200px;"></h1>
+        
         <h3>Sur une échelle de 1 (Mauvais) à 5 (Parfait)</h3><br>
         <div id="message" style="
         display: none;
@@ -241,54 +235,33 @@
 
     <script>
         document.getElementById("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault(); 
             document.getElementById("message").textContent = "Un Instant..";
             document.getElementById("message").style.display = "block";
             document.getElementById("submit-button").disabled = true;
 
-            // Collect the form data
             var formData = new FormData(this);
-            var sum = 0;
-            var count = 0;
-            for (var pair of formData.entries()) {
-                if (!isNaN(pair[1]) && pair[1].trim() !== '') { // Check if the value is a number
-                    sum += parseInt(pair[1]); // Add the value to the sum
-                    count++; // Increment count to calculate the number of questions answered
-                }
-            }
-
-            // Calculate the average
-            var average = count > 0 ? sum / count : 0;
             var formDataString = new URLSearchParams(formData).toString();
+            
+            var question5Value = parseInt(formData.get("question5"), 10);
 
-            // Send a POST request to your Google Apps Script
             fetch(
                 "https://script.google.com/macros/s/AKfycbyPasInfLRncgWnda3OCEAZi5sbb7ZWuOfgjZVDkiacDj6G2aqh7g6RsAVXe6CAfc3tVw/exec",
                 {
-                    redirect: "follow",
                     method: "POST",
+                    mode: "no-cors", 
                     body: formDataString,
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
                 }
             )
-            .then(function (response) {
-                // Check if the request was successful
-                if (response.ok) {
-                    return response; // Assuming your script returns JSON response
-                } else {
-                    throw new Error("Failed to submit the form.");
-                }
-            })
-            .then(function (data) {
-                // Display a success message
+            .then(function () {
                 document.getElementById("message").textContent = "Un Instant";
                 document.getElementById("message").style.backgroundColor = "green";
                 document.getElementById("message").style.color = "beige";
 
-                // Check the average and redirect accordingly
-                if (average >= 3.8) {
+                if (question5Value > 3) {
                     setTimeout(() => {
                         window.location.href = 'https://www.pagesjaunes.fr/contribution/votre-avis/56182032?codeRubrique=52154000';
                     }, 2000);
@@ -310,7 +283,6 @@
 
             })
             .catch(function (error) {
-                // Handle errors, you can display an error message here
                 console.error(error);
                 document.getElementById("message").textContent = "An error occurred while submitting the form.";
                 document.getElementById("message").style.display = "block";
